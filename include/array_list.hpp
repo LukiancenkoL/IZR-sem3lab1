@@ -7,6 +7,7 @@
 
 #include "list.hpp"
 #include "sort.hpp"
+#include "gtest/gtest.h"
 
 template <typename T>
 class ArrayList : public List<T> {
@@ -165,4 +166,5 @@ private:
 	T* m_data;
 	size_t m_size;
 	size_t m_capacity;
+	FRIEND_TEST(array_list, reallocate);
 };

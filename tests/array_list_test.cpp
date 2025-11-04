@@ -3,7 +3,6 @@
 #include "gtest/gtest.h"
 #include "array_list.hpp"
 
-
 TEST(array_list, push_front) {
 	auto list = ArrayList<int32_t>{};
 	list.push_front(5);
@@ -133,5 +132,30 @@ TEST(array_list, remove) {
 	}
 	for (size_t i = 0; i < list.length(); i += 2) {
 		ASSERT_TRUE(list.get(i) == static_cast<int32_t>(2 * i + 1));
+	}    
+}
+
+TEST(array_list, reallocate) {
+	auto list = ArrayList<int32_t>{};
+	ASSERT_EQ(list.m_size, 0);
+	ASSERT_EQ(list.m_capacity, 4);
+	list.insert(0, 42);
+	list.insert(999, 14);
+	list.insert(0, 357);
+	list.insert(1, 5);
+	ASSERT_EQ(list.m_size, 4);
+	ASSERT_EQ(list.m_capacity, 4);
+	list.insert(0, 6209);
+	ASSERT_EQ(list.m_size, 5);
+	ASSERT_EQ(list.m_capacity, 8);
+	list.pop_back();
+	list.pop_back();
+	list.pop_back();
+	ASSERT_EQ(list.m_size, 2);
+	ASSERT_EQ(list.m_capacity, 8);
+	for (size_t i = 0; i < 7; i++) {
+		list.push_back(0);
 	}
+	ASSERT_EQ(list.m_size, 9);
+	ASSERT_EQ(list.m_capacity, 16);
 }
