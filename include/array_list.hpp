@@ -14,7 +14,7 @@ template <typename T>
 class ArrayList : public List<T> {
 public:
 
-	void sort_array (const Sort<T>& sort){
+	void sort (const Sort<T>& sort){
 		sort.sort(*this);
 	}
 
