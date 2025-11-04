@@ -65,6 +65,12 @@ src = files(
 	'src/main.cpp',
 )
 
+tests = files(
+	'tests/array_list_test.cpp',
+)
+
+src += tests
+
 #subdir('src')
 
 # Dependencies (from gtest.wrap)
