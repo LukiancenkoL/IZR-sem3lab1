@@ -58,25 +58,28 @@ public:
 	void sort(List<T>& list,
 			std::function<Compare(const T& first, const T& second)> compare =
 					Sort<T>::default_compare) const {
+		if (list.length() < 2) {
+			return;
+		}
 		merge_sort(list, 0, list.length() - 1, compare);
 	}
 
 private:
-	void merge_sort(List<T>& list, size_t left, size_t right,
-			std::function<Compare(const T& first, const T& second)> compare) const {
+	void merge_sort(const List<T>& list, const size_t left, const size_t right,
+			const std::function<Compare(const T& first, const T& second)> compare) const {
 		if (left >= right) {
 			return;
 		}
-		size_t mid = left + (right - left) / 2;
+		const size_t mid = left + (right - left) / 2;
 		merge_sort(list, left, mid, compare);
 		merge_sort(list, mid + 1, right, compare);
 		merge(list, left, mid, right, compare);
 	}
 
-	void merge(List<T>& list, size_t left, size_t mid, size_t right,
+	void merge(const List<T>& list, const size_t left, const size_t mid, const size_t right,
 			std::function<Compare(const T& first, const T& second)> compare) const {
-		size_t n1 = mid - left + 1;
-		size_t n2 = right - mid;
+		const size_t n1 = mid - left + 1;
+		const size_t n2 = right - mid;
 
 		std::vector<T> left_vec(n1);
 		std::vector<T> right_vec(n2);
@@ -84,8 +87,8 @@ private:
 		for (size_t i = 0; i < n1; i++) {
 			left_vec[i] = list.get(left + i);
 		}
-		for (size_t ì = 0; ì < n1; ì++) {
-			right_vec[ì] = list.get(mid + 1 + ì);
+		for (size_t i = 0; i < n2; i++) {
+			right_vec[i] = list.get(mid + 1 + i);
 		}
 
 		size_t i = 0;
