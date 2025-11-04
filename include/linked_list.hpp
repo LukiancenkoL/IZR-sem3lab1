@@ -94,7 +94,15 @@ public:
 		if (this->is_empty()) {
 			throw std::out_of_range("List is empty");
 		}
-		T first = this->get_first();
+		if (this->length() == 1) {
+			const auto tmp = this->get_first();
+			delete this->m_head;
+			this->m_head = nullptr;
+			this->m_tail = nullptr;
+			this->m_size = 0;
+			return tmp;
+		}
+		const auto first = this->get_first();
 		this->m_head = this->m_head->get_next();
 		delete this->m_head->get_prev();
 		this->m_head->set_prev(nullptr);
