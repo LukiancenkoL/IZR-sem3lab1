@@ -113,10 +113,12 @@ public:
 	void insert(const size_t index, const T& element) {
 		if (index >= this->length()) {
 			this->push_back(element);
+			return;
 		}
 
 		if (index == 0) {
 			this->push_front(element);
+			return;
 		}
 
 		Node<T>* curr = this->m_head;
