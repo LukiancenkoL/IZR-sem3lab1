@@ -138,28 +138,39 @@ public:
 		if (index >= this->length()) {
 			throw std::out_of_range("index is out of bounds");
 		}
-		if (index == 0) {
-			return this->pop_front();
-		}
-		if (index - 1 == this->length()) {
-			return this->pop_back();
-		}
 		if (this->length() == 1) {
-			T tmp = this->get_first();
+			const auto tmp = this->get_first();
 			delete this->m_head;
 			this->m_head = nullptr;
 			this->m_tail = nullptr;
 			this->m_size = 0;
 			return tmp;
 		}
-		Node<T>* curr = this->m_head;
+		if (index == 0) {
+			const auto first = this->get_first();
+			this->m_head = this->m_head->get_next();
+			delete this->m_head->get_prev();
+			this->m_head->set_prev(nullptr);
+			this->m_size -= 1;
+			return first;
+		}
+		if (index == this->length() - 1) {
+			const auto last = this->get_last();
+			this->m_tail = this->m_tail->get_prev();
+			delete this->m_tail->get_next();
+			this->m_tail->set_next(nullptr);
+			this->m_size -= 1;
+			return last;
+		}
+		auto* curr = this->m_head;
 		for (size_t i = 0; i < index; i++) {
 			curr = curr->get_next();
 		}
-		T tmp = curr->get_data();
-		Node<T>* prev = curr->get_prev();
-		Node<T>* next = curr->get_next();
+		const auto tmp = curr->get_data();
+		auto* prev = curr->get_prev();
+		auto* next = curr->get_next();
 		delete curr;
+
 		prev->set_next(next);
 		next->set_prev(prev);
 		this->m_size -= 1;
