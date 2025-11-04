@@ -68,6 +68,8 @@ src = files(
 tests = files(
 	'tests/array_list_test.cpp',
 	'tests/linked_list_test.cpp',
+	'tests/insertion_sort_test.cpp',
+	'tests/merge_sort_test.cpp',
 )
 
 src += tests
