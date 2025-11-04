@@ -1,8 +1,6 @@
 
 #pragma once
 
-
-#include <print>
 #include <stdexcept>
 #include <cstring>
 #include <cstddef>
@@ -13,8 +11,18 @@
 template <typename T>
 class ArrayList : public List<T> {
 public:
+	ArrayList()
+		: m_data(new T[4])
+		, m_size(0)
+		, m_capacity(4) {
+	}
 
-	void sort (const Sort<T>& sort){
+	ArrayList(const size_t capacity)
+		: m_data(new T[capacity])
+		, m_size(0)
+		, m_capacity(capacity) {
+	}
+	void sort(const Sort<T>& sort) {
 		sort.sort(*this);
 	}
 
@@ -95,10 +103,18 @@ public:
 	void insert(const size_t index, const T& element) {
 		if (index >= this->length()) {
 			this->push_back(element);
+			return;
 		}
-
+		if (index == 0) {
+			this->push_front(element);
+			return;
+		}
+		if (this->m_size >= this->m_capacity) {
+			this->reallocate();
+		}
 		std::memmove(this->m_data + index + 1, this->m_data + index,
 				(this->length() - index) * sizeof(T));
+		this->m_size += 1;
 		this->m_data[index] = element;
 	}
 
@@ -109,6 +125,7 @@ public:
 		auto tmp = this->get(index);
 		std::memmove(this->m_data + index, this->m_data + index + 1,
 				(this->length() - index - 1) * sizeof(T));
+		this->m_size -= 1;
 		return tmp;
 	}
 
@@ -119,26 +136,11 @@ public:
 		return false;
 	}
 
-	ArrayList() {
-		std::println("constructor");
-		this->m_data = new T[4];
-		this->m_size = 0;
-		this->m_capacity = 4;
-	}
-
-	ArrayList(const size_t capacity) {
-		std::println("constructor with capacity");
-		this->m_data = new T[capacity];
-		this->m_size = 0;
-		this->m_capacity = capacity;
-	}
-
 	~ArrayList() {
 		delete[] this->m_data;
 		this->m_data = nullptr;
 		this->m_capacity = 0;
 		this->m_size = 0;
-		std::println("destructor");
 	}
 
 private:
