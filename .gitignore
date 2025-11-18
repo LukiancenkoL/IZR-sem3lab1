@@ -15,3 +15,5 @@ wayland-*-protocol.*
 !/subprojects/packagefiles
 !/subprojects/*.wrap
 .vscode
+docs/latex/
+docs/html/
