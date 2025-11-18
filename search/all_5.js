@@ -9,5 +9,6 @@ var searchData=
   ['get_5fmut_6',['get_mut',['../classArrayList.html#aca91a7f0c70cb328e01e880a857cb684',1,'ArrayList::get_mut()'],['../classLinkedList.html#acbcbf2a0845dd01e5960bd6d44c0e17b',1,'LinkedList::get_mut()'],['../classList.html#a2b0965e31d570b3d6d879d1a7dce1ee4',1,'List::get_mut()']]],
   ['get_5fnext_7',['get_next',['../classNode.html#a9b3568024bf6d0833e29c1c4fa136845',1,'Node']]],
   ['get_5fprev_8',['get_prev',['../classNode.html#ac629f01d9b697c54fe4414f79c88d1c6',1,'Node']]],
-  ['gr_9',['Gr',['../sort_8hpp.html#af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f',1,'sort.hpp']]]
+  ['github_20io_20izr_20sem3lab1_9',['Документація: https://lukiancenkol.github.io/IZR-sem3lab1/',['../index.html#autotoc_md4',1,'']]],
+  ['gr_10',['Gr',['../sort_8hpp.html#af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f',1,'sort.hpp']]]
 ];

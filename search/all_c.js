@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rectangle_0',['Rectangle',['../classRectangle.html',1,'']]],
-  ['remove_1',['remove',['../classArrayList.html#aa6c8ee708481efc56ebad9807bc74c93',1,'ArrayList::remove()'],['../classLinkedList.html#ab5126d557e48d6651cd0cf48d0ee6ede',1,'LinkedList::remove()'],['../classList.html#a495aaed174253281c761085041dc3264',1,'List::remove()']]]
+  ['quick_5fsort_5ftest_2ecpp_0',['quick_sort_test.cpp',['../quick__sort__test_8cpp.html',1,'']]],
+  ['quicksort_1',['QuickSort',['../classQuickSort.html',1,'']]]
 ];
