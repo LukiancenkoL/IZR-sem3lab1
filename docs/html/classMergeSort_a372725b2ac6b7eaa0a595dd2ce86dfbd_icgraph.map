@@ -1,6 +1,0 @@
-<map id="MergeSort::merge_sort" name="MergeSort::merge_sort">
-<area shape="rect" id="Node000001" title="Recursively divides the list for merge sort." alt="" coords="176,29,347,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="296,19,286,11,261,8,241,10,230,15,228,20,233,28,229,31,222,21,226,11,239,5,261,3,288,6,299,15"/>
-<area shape="rect" id="Node000002" href="$classMergeSort.html#ada7ea6029014500cb62456eeed0f9236" title="Sorts a list using the merge sort algorithm." alt="" coords="5,29,128,55"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="162,45,128,45,128,39,162,39"/>
-</map>

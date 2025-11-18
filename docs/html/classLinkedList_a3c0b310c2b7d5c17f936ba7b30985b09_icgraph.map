@@ -1,5 +1,0 @@
-<map id="LinkedList::push_back" name="LinkedList::push_back">
-<area shape="rect" id="Node000001" title="Inserts an element at the end of the list." alt="" coords="185,5,349,31"/>
-<area shape="rect" id="Node000002" href="$classLinkedList.html#a199e0a1216f40a47e515992e13e4f344" title="Inserts an element at a specific index." alt="" coords="5,5,137,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,21,137,21,137,15,172,15"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="LinkedList::push_front" name="LinkedList::push_front">
-<area shape="rect" id="Node000001" title="Inserts an element at the beginning of the list." alt="" coords="5,31,169,56"/>
-<area shape="rect" id="Node000002" href="$classLinkedList.html#a4b4fb68b6611f6913953257a24cbca74" title="Checks if the list is empty." alt="" coords="217,5,372,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,31,203,26,204,32,170,36"/>
-<area shape="rect" id="Node000004" href="$classNode.html#ac147a7f9d773078dd36db9c53b84e8e0" title="Sets the pointer to the next node." alt="" coords="235,55,355,80"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="170,50,221,56,221,61,169,55"/>
-<area shape="rect" id="Node000003" href="$classLinkedList.html#ac26a4ca0df7c8e0ea72ddee3718fb143" title="Returns the number of elements stored in the list." alt="" coords="420,5,556,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,15,406,15,406,21,372,21"/>
-</map>

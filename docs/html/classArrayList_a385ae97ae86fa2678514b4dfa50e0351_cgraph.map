@@ -1,9 +1,0 @@
-<map id="ArrayList::get_first" name="ArrayList::get_first">
-<area shape="rect" id="Node000001" title="Get first element." alt="" coords="5,31,147,56"/>
-<area shape="rect" id="Node000002" href="$classArrayList.html#a8231ec5698a8c19093f8ec969d08919e" title="Get constant reference to element at index." alt="" coords="214,5,323,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,31,200,24,201,30,147,37"/>
-<area shape="rect" id="Node000004" href="$classArrayList.html#ae74158993a4ff62e853ff5b52538dab8" title="Check if list has no elements." alt="" coords="195,55,343,80"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="147,49,182,54,181,59,147,55"/>
-<area shape="rect" id="Node000003" href="$classArrayList.html#ac80eda80449029f5087e2f0dff3ab7dc" title="Get number of stored elements." alt="" coords="391,5,520,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="324,15,377,15,377,21,324,21"/>
-</map>

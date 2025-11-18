@@ -1,8 +1,0 @@
-<map id="array_list.hpp" name="array_list.hpp">
-<area shape="rect" id="Node000001" title="Dynamic array&#45;based list implementation." alt="" coords="5,5,116,31"/>
-<area shape="rect" id="Node000002" href="$list_8hpp.html" title="Abstract interface for a generic list container." alt="" coords="25,152,96,177"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,32,51,79,52,110,57,138,51,139,47,110,46,78,55,31"/>
-<area shape="rect" id="Node000003" href="$sort_8hpp.html" title="Sort for lists." alt="" coords="61,79,135,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="69,30,88,65,83,68,64,32"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="94,106,75,141,71,139,89,103"/>
-</map>

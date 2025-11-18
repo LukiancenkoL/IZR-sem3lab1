@@ -1,7 +1,0 @@
-<map id="ArrayList::pop_front" name="ArrayList::pop_front">
-<area shape="rect" id="Node000001" title="Remove and return first element." alt="" coords="108,31,259,56"/>
-<area shape="rect" id="Node000002" href="$array__list__test_8cpp.html#a7a47d60bc92a0338e5204cdad42295f8" title=" " alt="" coords="5,5,60,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,31,60,25,61,20,95,26"/>
-<area shape="rect" id="Node000003" href="$linked__list__test_8cpp.html#a28580da46b374fb21057e28c59297cd5" title=" " alt="" coords="5,55,60,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="95,60,61,66,60,60,94,55"/>
-</map>

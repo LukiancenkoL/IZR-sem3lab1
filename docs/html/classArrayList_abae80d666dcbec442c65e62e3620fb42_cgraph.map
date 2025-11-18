@@ -1,5 +1,0 @@
-<map id="ArrayList::pop_back" name="ArrayList::pop_back">
-<area shape="rect" id="Node000001" title="Remove and return last element." alt="" coords="5,5,156,31"/>
-<area shape="rect" id="Node000002" href="$classArrayList.html#ae74158993a4ff62e853ff5b52538dab8" title="Check if list has no elements." alt="" coords="204,5,352,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,15,190,15,190,21,156,21"/>
-</map>
