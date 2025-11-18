@@ -1,9 +1,0 @@
-<map id="Sort&lt; T &gt;" name="Sort&lt; T &gt;">
-<area shape="rect" id="Node000001" title="Abstract base class for all sorting algorithms." alt="" coords="192,5,279,31"/>
-<area shape="rect" id="Node000002" href="$classInsertionSort.html" title="Insertion Sort implementation." alt="" coords="5,79,148,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,39,104,81,102,76,197,34"/>
-<area shape="rect" id="Node000003" href="$classMergeSort.html" title="Merge Sort implementation." alt="" coords="172,79,299,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,44,238,79,233,79,233,44"/>
-<area shape="rect" id="Node000004" href="$classQuickSort.html" title="Quick Sort implementation using dual&#45;pivot technique." alt="" coords="323,79,446,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="273,34,361,76,359,81,270,39"/>
-</map>

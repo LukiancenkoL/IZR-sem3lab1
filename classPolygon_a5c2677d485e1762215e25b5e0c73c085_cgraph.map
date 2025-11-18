@@ -1,9 +1,0 @@
-<map id="Polygon::move" name="Polygon::move">
-<area shape="rect" id="Node000001" title="Move all vertices of the polygon." alt="" coords="5,55,124,80"/>
-<area shape="rect" id="Node000002" href="$classList.html#a2b0965e31d570b3d6d879d1a7dce1ee4" title="Returns a mutable reference to the element at the given index." alt="" coords="172,5,279,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,52,169,32,171,37,107,57"/>
-<area shape="rect" id="Node000003" href="$classList.html#a1c6501027880d2a6c332c4928bdb6afd" title="Returns the number of elements in the list." alt="" coords="178,55,273,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,65,164,65,164,70,124,70"/>
-<area shape="rect" id="Node000004" href="$classPoint.html#a2793d05fe99662a957fe6bf749e7f6c7" title="Move point." alt="" coords="175,104,275,129"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="107,77,171,97,169,102,106,83"/>
-</map>

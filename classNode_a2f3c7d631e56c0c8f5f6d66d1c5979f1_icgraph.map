@@ -1,5 +1,0 @@
-<map id="Node::get_data" name="Node::get_data">
-<area shape="rect" id="Node000001" title="Returns the stored data (read&#45;only)." alt="" coords="169,5,291,31"/>
-<area shape="rect" id="Node000002" href="$classLinkedList.html#ab51881ad0dc9039e73900878c05951ff" title="Returns the element at a given index." alt="" coords="5,5,121,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,21,122,21,122,15,155,15"/>
-</map>
