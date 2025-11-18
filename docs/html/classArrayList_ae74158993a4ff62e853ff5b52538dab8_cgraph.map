@@ -1,0 +1,5 @@
+<map id="ArrayList::is_empty" name="ArrayList::is_empty">
+<area shape="rect" id="Node000001" title="Checks whether the list is empty." alt="" coords="5,5,153,31"/>
+<area shape="rect" id="Node000002" href="$classArrayList.html#ac80eda80449029f5087e2f0dff3ab7dc" title="Returns the number of elements in the list." alt="" coords="201,5,331,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,15,187,15,187,21,153,21"/>
+</map>

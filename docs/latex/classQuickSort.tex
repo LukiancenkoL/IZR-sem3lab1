@@ -1,0 +1,88 @@
+\doxysection{Quick\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classQuickSort}{}\label{classQuickSort}\index{QuickSort$<$ T $>$@{QuickSort$<$ T $>$}}
+
+
+Quick \doxylink{classSort}{Sort} implementation using dual-\/pivot technique.  
+
+
+
+
+{\ttfamily \#include $<$sort.\+hpp$>$}
+
+
+
+Inheritance diagram for Quick\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classQuickSort__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Quick\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classQuickSort__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classQuickSort_ad158ebbb6e4b9d49f240a4891f8ca009}{sort}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$ \&\mbox{\hyperlink{classArrayList}{list}}, \mbox{\hyperlink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::function}}$<$ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{first}}, \mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{second}})$>$ \mbox{\hyperlink{classArrayList}{compare}}=\mbox{\hyperlink{classSort}{Sort}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::default\+\_\+compare) \mbox{\hyperlink{classArrayList}{const}}
+\begin{DoxyCompactList}\small\item\em Sorts a list using the quick sort algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSort}{Sort$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArrayList}{virtual}} {\bfseries \texorpdfstring{$\sim$}{\string~}\+Sort} ()=\mbox{\hyperlink{classArrayList}{default}}
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}}$>$\newline
+class Quick\+Sort$<$ T $>$}
+Quick \doxylink{classSort}{Sort} implementation using dual-\/pivot technique. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of elements. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classQuickSort_ad158ebbb6e4b9d49f240a4891f8ca009}\label{classQuickSort_ad158ebbb6e4b9d49f240a4891f8ca009} 
+\index{QuickSort$<$ T $>$@{QuickSort$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!QuickSort$<$ T $>$@{QuickSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classQuickSort}{Quick\+Sort}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$ \&}]{list,  }\item[{\mbox{\hyperlink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::function}}$<$ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{first}}, \mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{second}})$>$}]{compare = {\ttfamily \mbox{\hyperlink{classSort}{Sort}}$<$\mbox{\hyperlink{classArrayList}{T}}$>$\+:\+:default\+\_\+compare} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sorts a list using the quick sort algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \doxylink{classList}{List} to be sorted. \\
+\hline
+{\em compare} & Comparison function. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSort_a2e733a65348ac178db5e1cc05a9f8230}{Sort$<$ T $>$}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{classQuickSort_ad158ebbb6e4b9d49f240a4891f8ca009_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sort_8hpp}{sort.\+hpp}}\end{DoxyCompactItemize}

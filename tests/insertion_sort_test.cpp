@@ -1,120 +1,147 @@
-#include "gtest/gtest.h"
+/**
+ * @file insertion_sort_test.cpp
+ * @author Lukiancenko Liza
+ * @brief Unit tests for InsertionSort using ArrayList.
+ * @version 0.1
+ * @date 2025-11-18
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ * Covers different input cases such as empty lists, sorted lists,
+ * reversed lists, equal elements, and general unsorted input.
+ */
 
+ /// \cond
+#include "gtest/gtest.h"
+#include <cstddef>
+/// \endcond
 #include "sort.hpp"
 #include "array_list.hpp"
-#include <cstddef>
 
 
 
+
+/**
+ * @test Verifies correctness of InsertionSort with various input patterns.
+ */
 TEST(sort, insertion_sort) {
-	auto insertion_sort = InsertionSort<int32_t>{};
-	{
-		auto list_empty = ArrayList<int32_t>{};
-		ASSERT_NO_THROW(list_empty.sort(insertion_sort));
-	}
+    auto insertion_sort = InsertionSort<int32_t>{};
 
-	{
-		auto list_one_element = ArrayList<int32_t>{};
-		list_one_element.push_back(1);
-		ASSERT_NO_THROW(list_one_element.sort(insertion_sort));
-	}
+    // empty list
+    {
+        auto list = ArrayList<int32_t>{};
+        ASSERT_NO_THROW(list.sort(insertion_sort));
+    }
 
-	{
-		auto list_two_equal_elements = ArrayList<int32_t>{};
-		list_two_equal_elements.push_back(1);
-		list_two_equal_elements.push_back(1);
-		ASSERT_NO_THROW(list_two_equal_elements.sort(insertion_sort));
-	}
+    // single element
+    {
+        auto list = ArrayList<int32_t>{};
+        list.push_back(1);
+        ASSERT_NO_THROW(list.sort(insertion_sort));
+    }
 
-	{
-		auto list_many_equal_elements = ArrayList<int32_t>{};
-		for (size_t i = 0; i < 9; i++) {
-			list_many_equal_elements.push_back(1);
-		}
+    // two equal elements
+    {
+        auto list = ArrayList<int32_t>{};
+        list.push_back(1);
+        list.push_back(1);
+        ASSERT_NO_THROW(list.sort(insertion_sort));
+    }
 
-		ASSERT_NO_THROW(list_many_equal_elements.sort(insertion_sort));
-		for (size_t i = 0; i < list_many_equal_elements.length(); i++) {
-			ASSERT_EQ(list_many_equal_elements.get(i), 1);
-		}
-	}
+    // many equal elements
+    {
+        auto list = ArrayList<int32_t>{};
+        for (size_t i = 0; i < 9; i++) {
+            list.push_back(1);
+        }
+        ASSERT_NO_THROW(list.sort(insertion_sort));
 
-	{
-		auto list_two_sorted = ArrayList<int32_t>{};
+        for (size_t i = 0; i < list.length(); i++) {
+            ASSERT_EQ(list.get(i), 1);
+        }
+    }
 
-		list_two_sorted.push_back(1);
-		list_two_sorted.push_back(2);
-		ASSERT_NO_THROW(list_two_sorted.sort(insertion_sort));
-		ASSERT_EQ(list_two_sorted.get(0), 1);
-		ASSERT_EQ(list_two_sorted.get(1), 2);
-	}
+    // already sorted (two elements)
+    {
+        auto list = ArrayList<int32_t>{};
+        list.push_back(1);
+        list.push_back(2);
+        ASSERT_NO_THROW(list.sort(insertion_sort));
+        ASSERT_EQ(list.get(0), 1);
+        ASSERT_EQ(list.get(1), 2);
+    }
 
-	{
-		auto list_two_unsorted = ArrayList<int32_t>{};
-		list_two_unsorted.push_back(2);
-		list_two_unsorted.push_back(1);
-		
-		ASSERT_NO_THROW(list_two_unsorted.sort(insertion_sort));
-		ASSERT_EQ(list_two_unsorted.get(0), 1);
-		ASSERT_EQ(list_two_unsorted.get(1), 2);
-	}
+    // unsorted (two elements)
+    {
+        auto list = ArrayList<int32_t>{};
+        list.push_back(2);
+        list.push_back(1);
 
-	{
-		auto list_many_sorted = ArrayList<int32_t>{};
-		list_many_sorted.push_back(1);
-		list_many_sorted.push_back(2);
-		list_many_sorted.push_back(3);
-		list_many_sorted.push_back(5);
-		list_many_sorted.push_back(7);
-		list_many_sorted.push_back(20);
-		list_many_sorted.push_back(2369);
+        ASSERT_NO_THROW(list.sort(insertion_sort));
+        ASSERT_EQ(list.get(0), 1);
+        ASSERT_EQ(list.get(1), 2);
+    }
 
-		ASSERT_NO_THROW(list_many_sorted.sort(insertion_sort));
-		ASSERT_EQ(list_many_sorted.get(0), 1);
-		ASSERT_EQ(list_many_sorted.get(1), 2);
-		ASSERT_EQ(list_many_sorted.get(2), 3);
-		ASSERT_EQ(list_many_sorted.get(3), 5);
-		ASSERT_EQ(list_many_sorted.get(4), 7);
-		ASSERT_EQ(list_many_sorted.get(5), 20);
-		ASSERT_EQ(list_many_sorted.get(6), 2369);
-	}
+    // already sorted long list
+    {
+        auto list = ArrayList<int32_t>{};
+        list.push_back(1);
+        list.push_back(2);
+        list.push_back(3);
+        list.push_back(5);
+        list.push_back(7);
+        list.push_back(20);
+        list.push_back(2369);
 
-	{
-		auto list_many_reverse = ArrayList<int32_t>{};
-		list_many_reverse.push_back(2369);
-		list_many_reverse.push_back(20);
-		list_many_reverse.push_back(7);
-		list_many_reverse.push_back(5);
-		list_many_reverse.push_back(3);
-		list_many_reverse.push_back(2);
-		list_many_reverse.push_back(1);
+        ASSERT_NO_THROW(list.sort(insertion_sort));
+        ASSERT_EQ(list.get(0), 1);
+        ASSERT_EQ(list.get(1), 2);
+        ASSERT_EQ(list.get(2), 3);
+        ASSERT_EQ(list.get(3), 5);
+        ASSERT_EQ(list.get(4), 7);
+        ASSERT_EQ(list.get(5), 20);
+        ASSERT_EQ(list.get(6), 2369);
+    }
 
-		ASSERT_NO_THROW(list_many_reverse.sort(insertion_sort));
-		ASSERT_EQ(list_many_reverse.get(0), 1);
-		ASSERT_EQ(list_many_reverse.get(1), 2);
-		ASSERT_EQ(list_many_reverse.get(2), 3);
-		ASSERT_EQ(list_many_reverse.get(3), 5);
-		ASSERT_EQ(list_many_reverse.get(4), 7);
-		ASSERT_EQ(list_many_reverse.get(5), 20);
-		ASSERT_EQ(list_many_reverse.get(6), 2369);
-	}
+    // reversed list
+    {
+        auto list = ArrayList<int32_t>{};
+        list.push_back(2369);
+        list.push_back(20);
+        list.push_back(7);
+        list.push_back(5);
+        list.push_back(3);
+        list.push_back(2);
+        list.push_back(1);
 
-	{
-		auto list_many_unsorted = ArrayList<int32_t>{};
-		list_many_unsorted.push_back(20);
-		list_many_unsorted.push_back(3);
-		list_many_unsorted.push_back(7);
-		list_many_unsorted.push_back(1);
-		list_many_unsorted.push_back(5);
-		list_many_unsorted.push_back(2369);
-		list_many_unsorted.push_back(2);
+        ASSERT_NO_THROW(list.sort(insertion_sort));
+        ASSERT_EQ(list.get(0), 1);
+        ASSERT_EQ(list.get(1), 2);
+        ASSERT_EQ(list.get(2), 3);
+        ASSERT_EQ(list.get(3), 5);
+        ASSERT_EQ(list.get(4), 7);
+        ASSERT_EQ(list.get(5), 20);
+        ASSERT_EQ(list.get(6), 2369);
+    }
 
-		ASSERT_NO_THROW(list_many_unsorted.sort(insertion_sort));
-		ASSERT_EQ(list_many_unsorted.get(0), 1);
-		ASSERT_EQ(list_many_unsorted.get(1), 2);
-		ASSERT_EQ(list_many_unsorted.get(2), 3);
-		ASSERT_EQ(list_many_unsorted.get(3), 5);
-		ASSERT_EQ(list_many_unsorted.get(4), 7);
-		ASSERT_EQ(list_many_unsorted.get(5), 20);
-		ASSERT_EQ(list_many_unsorted.get(6), 2369);
-	}
+    // random unsorted list
+    {
+        auto list = ArrayList<int32_t>{};
+        list.push_back(20);
+        list.push_back(3);
+        list.push_back(7);
+        list.push_back(1);
+        list.push_back(5);
+        list.push_back(2369);
+        list.push_back(2);
+
+        ASSERT_NO_THROW(list.sort(insertion_sort));
+        ASSERT_EQ(list.get(0), 1);
+        ASSERT_EQ(list.get(1), 2);
+        ASSERT_EQ(list.get(2), 3);
+        ASSERT_EQ(list.get(3), 5);
+        ASSERT_EQ(list.get(4), 7);
+        ASSERT_EQ(list.get(5), 20);
+        ASSERT_EQ(list.get(6), 2369);
+    }
 }

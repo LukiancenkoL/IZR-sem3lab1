@@ -1,0 +1,18 @@
+digraph "/home/lzluk/uni_proga/sem3lab1/subprojects/googletest-1.17.0"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_f8b92b099185c2eecab759fa5fb24630 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="subprojects", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_f8b92b099185c2eecab759fa5fb24630.html",tooltip=""]
+  subgraph clusterdir_6dad01ba90642ea3db0a32ca8238f0ae {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_6dad01ba90642ea3db0a32ca8238f0ae.html",tooltip=""]
+    dir_6dad01ba90642ea3db0a32ca8238f0ae [shape=plaintext, label="googletest-1.17.0"];
+  dir_c4d6093cc6f12bd864251a26608a130e [label="docs", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_c4d6093cc6f12bd864251a26608a130e.html",tooltip=""];
+  dir_ab17eed777a88dd6fd22a8315f477971 [label="googlemock", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_ab17eed777a88dd6fd22a8315f477971.html",tooltip=""];
+  dir_c60b7bdf4309f8ddb81a762e387f50ae [label="googletest", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_c60b7bdf4309f8ddb81a762e387f50ae.html",tooltip=""];
+  }
+  }
+}

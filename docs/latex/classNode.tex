@@ -1,0 +1,199 @@
+\doxysection{Node\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classNode}{}\label{classNode}\index{Node$<$ T $>$@{Node$<$ T $>$}}
+
+
+\doxylink{classNode}{Node} structure used in a doubly linked list.  
+
+
+
+
+{\ttfamily \#include $<$linked\+\_\+list.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNode_adcc7063815ca7ff6bf14915047cef7c3}{Node}} (\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{element}})
+\begin{DoxyCompactList}\small\item\em Constructs a node holding the given element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classNode_a363ca16e15cfae8312f2c438c96c2575}{set\+\_\+prev}} (\mbox{\hyperlink{classNode}{Node}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classArrayList}{new\+\_\+value}})
+\begin{DoxyCompactList}\small\item\em Sets the pointer to the previous node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classNode_ac147a7f9d773078dd36db9c53b84e8e0}{set\+\_\+next}} (\mbox{\hyperlink{classNode}{Node}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classArrayList}{new\+\_\+value}})
+\begin{DoxyCompactList}\small\item\em Sets the pointer to the next node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classNode_a2f3c7d631e56c0c8f5f6d66d1c5979f1}{get\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Returns the stored data (read-\/only). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classNode_a59c2ec59a612a47b2ecfe258630d2081}{get\+\_\+data\+\_\+mut}} ()
+\begin{DoxyCompactList}\small\item\em Returns mutable reference to stored data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classNode_a9b3568024bf6d0833e29c1c4fa136845}{get\+\_\+next}} ()
+\begin{DoxyCompactList}\small\item\em Returns pointer to the next node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classNode_ac629f01d9b697c54fe4414f79c88d1c6}{get\+\_\+prev}} ()
+\begin{DoxyCompactList}\small\item\em Returns pointer to the previous node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}}$>$\newline
+class Node$<$ T $>$}
+\doxylink{classNode}{Node} structure used in a doubly linked list. 
+
+Each node stores an element, a pointer to the previous node, and a pointer to the next node.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the stored element. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classNode_adcc7063815ca7ff6bf14915047cef7c3}\label{classNode_adcc7063815ca7ff6bf14915047cef7c3} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!Node@{Node}}
+\index{Node@{Node}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\mbox{\hyperlink{classNode}{\+::\+Node}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a node holding the given element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Value to store in the node. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNode_a2f3c7d631e56c0c8f5f6d66d1c5979f1}\label{classNode_a2f3c7d631e56c0c8f5f6d66d1c5979f1} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::get\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the stored data (read-\/only). 
+
+\begin{DoxyReturn}{Returns}
+const reference to stored data. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classNode_a2f3c7d631e56c0c8f5f6d66d1c5979f1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classNode_a59c2ec59a612a47b2ecfe258630d2081}\label{classNode_a59c2ec59a612a47b2ecfe258630d2081} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!get\_data\_mut@{get\_data\_mut}}
+\index{get\_data\_mut@{get\_data\_mut}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_data\_mut()}{get\_data\_mut()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::get\+\_\+data\+\_\+mut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns mutable reference to stored data. 
+
+\begin{DoxyReturn}{Returns}
+reference to stored data. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classNode_a59c2ec59a612a47b2ecfe258630d2081_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classNode_a9b3568024bf6d0833e29c1c4fa136845}\label{classNode_a9b3568024bf6d0833e29c1c4fa136845} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!get\_next@{get\_next}}
+\index{get\_next@{get\_next}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_next()}{get\_next()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classNode}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::get\+\_\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns pointer to the next node. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to next node, or nullptr. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classNode_a9b3568024bf6d0833e29c1c4fa136845_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classNode_ac629f01d9b697c54fe4414f79c88d1c6}\label{classNode_ac629f01d9b697c54fe4414f79c88d1c6} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!get\_prev@{get\_prev}}
+\index{get\_prev@{get\_prev}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_prev()}{get\_prev()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classNode}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::get\+\_\+prev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns pointer to the previous node. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to previous node, or nullptr. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classNode_ac629f01d9b697c54fe4414f79c88d1c6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classNode_ac147a7f9d773078dd36db9c53b84e8e0}\label{classNode_ac147a7f9d773078dd36db9c53b84e8e0} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!set\_next@{set\_next}}
+\index{set\_next@{set\_next}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set\_next()}{set\_next()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::set\+\_\+next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$ \texorpdfstring{$\ast$}{*}}]{new\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the pointer to the next node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & Pointer to the next node. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNode_ac147a7f9d773078dd36db9c53b84e8e0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classNode_a363ca16e15cfae8312f2c438c96c2575}\label{classNode_a363ca16e15cfae8312f2c438c96c2575} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!set\_prev@{set\_prev}}
+\index{set\_prev@{set\_prev}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set\_prev()}{set\_prev()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::set\+\_\+prev (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$ \texorpdfstring{$\ast$}{*}}]{new\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the pointer to the previous node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & Pointer to the previous node. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNode_a363ca16e15cfae8312f2c438c96c2575_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{linked__list_8hpp}{linked\+\_\+list.\+hpp}}\end{DoxyCompactItemize}

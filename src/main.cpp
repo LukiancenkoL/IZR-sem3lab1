@@ -1,7 +1,20 @@
+
+/**
+ * @file main.cpp
+ * @author Lukiancenko Liza
+ * @brief Main file
+ * @version 0.1
+ * @date 2025-11-16
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
+
+/// \cond
 #include <cstddef>
 #include <print>
-
 #include "gtest/gtest.h"
+/// \endcond
 #include "linked_list.hpp"
 #include "sort.hpp"
 #include "array_list.hpp"

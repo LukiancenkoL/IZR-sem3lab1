@@ -1,0 +1,70 @@
+\doxysection{Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classSort}{}\label{classSort}\index{Sort$<$ T $>$@{Sort$<$ T $>$}}
+
+
+Abstract base class for all sorting algorithms.  
+
+
+
+
+{\ttfamily \#include $<$sort.\+hpp$>$}
+
+
+
+Inheritance diagram for Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSort__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArrayList}{virtual}} \mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classSort_a2e733a65348ac178db5e1cc05a9f8230}{sort}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$ \&\mbox{\hyperlink{classArrayList}{list}}, \mbox{\hyperlink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::function}}$<$ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{first}}, \mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{second}})$>$ \mbox{\hyperlink{classArrayList}{compare}}=default\+\_\+compare) \mbox{\hyperlink{classArrayList}{const}} =0
+\begin{DoxyCompactList}\small\item\em Sorts a given list using the provided comparison function. \end{DoxyCompactList}\item 
+\Hypertarget{classSort_af5965ee2e66b8f77eaa789f11bfc29de}\label{classSort_af5965ee2e66b8f77eaa789f11bfc29de} 
+\mbox{\hyperlink{classArrayList}{virtual}} {\bfseries \texorpdfstring{$\sim$}{\string~}\+Sort} ()=\mbox{\hyperlink{classArrayList}{default}}
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}}$>$\newline
+class Sort$<$ T $>$}
+Abstract base class for all sorting algorithms. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of elements stored in the \doxylink{classList}{List}. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSort_a2e733a65348ac178db5e1cc05a9f8230}\label{classSort_a2e733a65348ac178db5e1cc05a9f8230} 
+\index{Sort$<$ T $>$@{Sort$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!Sort$<$ T $>$@{Sort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{virtual}} \mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classSort}{Sort}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$ \&}]{list,  }\item[{\mbox{\hyperlink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::function}}$<$ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{first}}, \mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{second}})$>$}]{compare = {\ttfamily default\+\_\+compare} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sorts a given list using the provided comparison function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \doxylink{classList}{List} to be sorted. \\
+\hline
+{\em compare} & User-\/defined comparator function. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classInsertionSort_a8f62362ca5084b39d947ce2aa24999ec}{Insertion\+Sort$<$ T $>$}}, \mbox{\hyperlink{classMergeSort_ada7ea6029014500cb62456eeed0f9236}{Merge\+Sort$<$ T $>$}}, and \mbox{\hyperlink{classQuickSort_ad158ebbb6e4b9d49f240a4891f8ca009}{Quick\+Sort$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sort_8hpp}{sort.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="Node::get_next" name="Node::get_next">
+<area shape="rect" id="Node000001" title="Returns pointer to the next node." alt="" coords="203,55,324,80"/>
+<area shape="rect" id="Node000002" href="$classLinkedList.html#ab51881ad0dc9039e73900878c05951ff" title="Returns the element at a given index." alt="" coords="22,5,138,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,54,128,33,129,28,203,49"/>
+<area shape="rect" id="Node000003" href="$classLinkedList.html#acbcbf2a0845dd01e5960bd6d44c0e17b" title="Returns a mutable reference to the element at a given index." alt="" coords="5,55,155,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,70,155,70,155,65,189,65"/>
+<area shape="rect" id="Node000004" href="$classLinkedList.html#a199e0a1216f40a47e515992e13e4f344" title="Inserts an element at a specific index." alt="" coords="14,104,146,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="203,86,129,106,128,101,202,81"/>
+</map>
