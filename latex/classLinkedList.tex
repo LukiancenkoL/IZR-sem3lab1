@@ -1,0 +1,497 @@
+\doxysection{Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classLinkedList}{}\label{classLinkedList}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+
+
+Doubly linked list implementation of the \doxylink{classList}{List} interface.  
+
+
+
+
+{\ttfamily \#include $<$linked\+\_\+list.\+hpp$>$}
+
+
+
+Inheritance diagram for Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classLinkedList__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classLinkedList__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArrayList}{size\+\_\+t}} \mbox{\hyperlink{classLinkedList_ac26a4ca0df7c8e0ea72ddee3718fb143}{length}} () \mbox{\hyperlink{classArrayList}{const}}
+\begin{DoxyCompactList}\small\item\em Returns the number of elements stored in the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classLinkedList_a98a64e6a41c16c8e46b3c0c777a282bb}{push\+\_\+front}} (\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{element}})
+\begin{DoxyCompactList}\small\item\em Inserts an element at the beginning of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classLinkedList_a3c0b310c2b7d5c17f936ba7b30985b09}{push\+\_\+back}} (\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{element}})
+\begin{DoxyCompactList}\small\item\em Inserts an element at the end of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{T}} \mbox{\hyperlink{classLinkedList_ad4283b75d12262dc9d9aa332c3bb8020}{pop\+\_\+back}} ()
+\begin{DoxyCompactList}\small\item\em Removes and returns the last element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{T}} \mbox{\hyperlink{classLinkedList_ab6fd7591d9daeaf07e18c9c0045f9d1f}{pop\+\_\+front}} ()
+\begin{DoxyCompactList}\small\item\em Removes and returns the first element of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classLinkedList_a199e0a1216f40a47e515992e13e4f344}{insert}} (\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{size\+\_\+t}} index, \mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&\mbox{\hyperlink{classArrayList}{element}})
+\begin{DoxyCompactList}\small\item\em Inserts an element at a specific index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{T}} \mbox{\hyperlink{classLinkedList_ab5126d557e48d6651cd0cf48d0ee6ede}{remove}} (\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{size\+\_\+t}} index)
+\begin{DoxyCompactList}\small\item\em Removes and returns an element at a given index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{bool}} \mbox{\hyperlink{classLinkedList_a4b4fb68b6611f6913953257a24cbca74}{is\+\_\+empty}} () \mbox{\hyperlink{classArrayList}{const}}
+\begin{DoxyCompactList}\small\item\em Checks if the list is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classLinkedList_ab51881ad0dc9039e73900878c05951ff}{get}} (\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{size\+\_\+t}} index) \mbox{\hyperlink{classArrayList}{const}}
+\begin{DoxyCompactList}\small\item\em Returns the element at a given index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classLinkedList_acbcbf2a0845dd01e5960bd6d44c0e17b}{get\+\_\+mut}} (\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{size\+\_\+t}} index) \mbox{\hyperlink{classArrayList}{const}}
+\begin{DoxyCompactList}\small\item\em Returns a mutable reference to the element at a given index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classLinkedList_a11a2b359ce804eb94fba3670292c7a57}{get\+\_\+first}} () \mbox{\hyperlink{classArrayList}{const}}
+\begin{DoxyCompactList}\small\item\em Returns the first element in the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classLinkedList_af57c4935e76cb88f50d7ba24211aa64b}{get\+\_\+last}} () \mbox{\hyperlink{classArrayList}{const}}
+\begin{DoxyCompactList}\small\item\em Returns the last element in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classList}{List$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArrayList}{virtual}} {\bfseries \texorpdfstring{$\sim$}{\string~}\+List} ()=\mbox{\hyperlink{classArrayList}{default}}
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}}$>$\newline
+class Linked\+List$<$ T $>$}
+Doubly linked list implementation of the \doxylink{classList}{List} interface. 
+
+Provides insertion, removal, forward traversal, and access operations.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of stored elements. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLinkedList_ab51881ad0dc9039e73900878c05951ff}\label{classLinkedList_ab51881ad0dc9039e73900878c05951ff} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!get@{get}}
+\index{get@{get}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{size\+\_\+t}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the element at a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const reference to the element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::out\+\_\+of\+\_\+range}} & If index is invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classLinkedList_ab51881ad0dc9039e73900878c05951ff_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_a11a2b359ce804eb94fba3670292c7a57}\label{classLinkedList_a11a2b359ce804eb94fba3670292c7a57} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!get\_first@{get\_first}}
+\index{get\_first@{get\_first}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_first()}{get\_first()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::get\+\_\+first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the first element in the list. 
+
+\begin{DoxyReturn}{Returns}
+const reference to the first element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::out\+\_\+of\+\_\+range}} & If the list is empty. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classList_aa8ae940437a8bfa41f9ab19922d406a9}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLinkedList_a11a2b359ce804eb94fba3670292c7a57_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classLinkedList_a11a2b359ce804eb94fba3670292c7a57_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_af57c4935e76cb88f50d7ba24211aa64b}\label{classLinkedList_af57c4935e76cb88f50d7ba24211aa64b} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!get\_last@{get\_last}}
+\index{get\_last@{get\_last}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_last()}{get\_last()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::get\+\_\+last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the last element in the list. 
+
+\begin{DoxyReturn}{Returns}
+const reference to the last element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::out\+\_\+of\+\_\+range}} & If the list is empty. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classList_a70d8d3acdf046cd6ef0a4981a44636da}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLinkedList_af57c4935e76cb88f50d7ba24211aa64b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classLinkedList_af57c4935e76cb88f50d7ba24211aa64b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_acbcbf2a0845dd01e5960bd6d44c0e17b}\label{classLinkedList_acbcbf2a0845dd01e5960bd6d44c0e17b} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!get\_mut@{get\_mut}}
+\index{get\_mut@{get\_mut}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_mut()}{get\_mut()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{T}} \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::get\+\_\+mut (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{size\+\_\+t}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns a mutable reference to the element at a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::out\+\_\+of\+\_\+range}} & If index is invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classLinkedList_acbcbf2a0845dd01e5960bd6d44c0e17b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_a199e0a1216f40a47e515992e13e4f344}\label{classLinkedList_a199e0a1216f40a47e515992e13e4f344} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{size\+\_\+t}}}]{index,  }\item[{\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Inserts an element at a specific index. 
+
+If the index is equal to or larger than the size, the element is appended.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position to insert the element. \\
+\hline
+{\em element} & Element to insert. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classList_ae754706a43d57a3a094580760b144341}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLinkedList_a199e0a1216f40a47e515992e13e4f344_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_a4b4fb68b6611f6913953257a24cbca74}\label{classLinkedList_a4b4fb68b6611f6913953257a24cbca74} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{bool}} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::is\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the list is empty. 
+
+\begin{DoxyReturn}{Returns}
+true if size == 0, otherwise false. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classList_ae7b7132b9a4ffd834e9a9b742d3faada}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classLinkedList_a4b4fb68b6611f6913953257a24cbca74_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLinkedList_a4b4fb68b6611f6913953257a24cbca74_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_ac26a4ca0df7c8e0ea72ddee3718fb143}\label{classLinkedList_ac26a4ca0df7c8e0ea72ddee3718fb143} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!length@{length}}
+\index{length@{length}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{size\+\_\+t}} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of elements stored in the list. 
+
+\begin{DoxyReturn}{Returns}
+Number of elements. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classList_a1c6501027880d2a6c332c4928bdb6afd}{List$<$ T $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLinkedList_ac26a4ca0df7c8e0ea72ddee3718fb143_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_ad4283b75d12262dc9d9aa332c3bb8020}\label{classLinkedList_ad4283b75d12262dc9d9aa332c3bb8020} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{T}} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Removes and returns the last element. 
+
+\begin{DoxyReturn}{Returns}
+The removed element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::out\+\_\+of\+\_\+range}} & If the list is empty. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classList_ac11be2e0aed32ae44d108527e04ce461}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLinkedList_ad4283b75d12262dc9d9aa332c3bb8020_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_ab6fd7591d9daeaf07e18c9c0045f9d1f}\label{classLinkedList_ab6fd7591d9daeaf07e18c9c0045f9d1f} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!pop\_front@{pop\_front}}
+\index{pop\_front@{pop\_front}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_front()}{pop\_front()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{T}} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::pop\+\_\+front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Removes and returns the first element of the list. 
+
+\begin{DoxyReturn}{Returns}
+The removed element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::out\+\_\+of\+\_\+range}} & If the list is empty. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classList_afb8ecf89209ae2f06b7ee844921ff843}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLinkedList_ab6fd7591d9daeaf07e18c9c0045f9d1f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_a3c0b310c2b7d5c17f936ba7b30985b09}\label{classLinkedList_a3c0b310c2b7d5c17f936ba7b30985b09} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Inserts an element at the end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Element to insert. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classList_a48edbb8a5d52bdec2ca29d55301af044}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLinkedList_a3c0b310c2b7d5c17f936ba7b30985b09_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classLinkedList_a3c0b310c2b7d5c17f936ba7b30985b09_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_a98a64e6a41c16c8e46b3c0c777a282bb}\label{classLinkedList_a98a64e6a41c16c8e46b3c0c777a282bb} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!push\_front@{push\_front}}
+\index{push\_front@{push\_front}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_front()}{push\_front()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{void}} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::push\+\_\+front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{T}} \&}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Inserts an element at the beginning of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Element to insert. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classList_a3bea6a69d055f536375396ccd157be6b}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLinkedList_a98a64e6a41c16c8e46b3c0c777a282bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classLinkedList_a98a64e6a41c16c8e46b3c0c777a282bb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classLinkedList_ab5126d557e48d6651cd0cf48d0ee6ede}\label{classLinkedList_ab5126d557e48d6651cd0cf48d0ee6ede} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classArrayList}{typename}} \mbox{\hyperlink{classArrayList}{T}} $>$ \\
+\mbox{\hyperlink{classArrayList}{T}} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classArrayList}{T}} $>$\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArrayList}{const}} \mbox{\hyperlink{classArrayList}{size\+\_\+t}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Removes and returns an element at a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the element to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The removed element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{std\+::out\+\_\+of\+\_\+range}} & If index is invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classList_a495aaed174253281c761085041dc3264}{List$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLinkedList_ab5126d557e48d6651cd0cf48d0ee6ede_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{linked__list_8hpp}{linked\+\_\+list.\+hpp}}\end{DoxyCompactItemize}

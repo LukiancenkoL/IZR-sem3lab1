@@ -1,0 +1,5 @@
+<map id="Node::get_prev" name="Node::get_prev">
+<area shape="rect" id="Node000001" title="Returns pointer to the previous node." alt="" coords="185,5,307,31"/>
+<area shape="rect" id="Node000002" href="$classLinkedList.html#a199e0a1216f40a47e515992e13e4f344" title="Inserts an element at a specific index." alt="" coords="5,5,137,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,21,138,21,138,15,171,15"/>
+</map>

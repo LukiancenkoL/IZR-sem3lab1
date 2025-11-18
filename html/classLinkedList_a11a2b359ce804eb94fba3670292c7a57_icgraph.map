@@ -1,0 +1,7 @@
+<map id="LinkedList::get_first" name="LinkedList::get_first">
+<area shape="rect" id="Node000001" title="Returns the first element in the list." alt="" coords="211,31,359,56"/>
+<area shape="rect" id="Node000002" href="$classLinkedList.html#ab6fd7591d9daeaf07e18c9c0045f9d1f" title="Removes and returns the first element of the list." alt="" coords="5,5,163,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,35,163,31,163,25,197,30"/>
+<area shape="rect" id="Node000003" href="$classLinkedList.html#ab5126d557e48d6651cd0cf48d0ee6ede" title="Removes and returns an element at a given index." alt="" coords="11,55,157,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,57,157,61,157,56,196,51"/>
+</map>

@@ -1,0 +1,201 @@
+\doxysection{sort.\+hpp}
+\hypertarget{sort_8hpp_source}{}\label{sort_8hpp_source}\index{sort.hpp@{sort.hpp}}
+\mbox{\hyperlink{sort_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{list_8hpp}{list.hpp}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504abccd5ec3ec8fd3a4471e71e9b407c60c}{Le}}\ =\ -\/1,\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a3718b5ecf60aa0dba49e150e96cb1fc3}{Eq}}\ =\ 0,\ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f}{Gr}}\ =\ 1,\ \ }
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSort}{Sort}}\ \{}
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSort_a2e733a65348ac178db5e1cc05a9f8230}{sort}}(}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classList}{List<T>}}\&\ list,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::function<\mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ T\&\ second)>\ compare\ =}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ default\_compare}
+\DoxyCodeLine{00048\ \ \ \ \ )\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSort_af5965ee2e66b8f77eaa789f11bfc29de}{\string~Sort}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}\ default\_compare(\textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ T\&\ second)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (first\ >\ second)\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f}{Compare::Gr}};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (first\ <\ second)\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504abccd5ec3ec8fd3a4471e71e9b407c60c}{Compare::Le}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a3718b5ecf60aa0dba49e150e96cb1fc3}{Compare::Eq}};}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00078\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInsertionSort}{InsertionSort}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSort}{Sort}}<T>\ \{}
+\DoxyCodeLine{00079\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInsertionSort_a8f62362ca5084b39d947ce2aa24999ec}{sort}}(}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classList}{List<T>}}\&\ list,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ std::function<\mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ T\&\ second)>\ compare\ =}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSort}{Sort<T>::default\_compare}}}
+\DoxyCodeLine{00090\ \ \ \ \ )\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 1;\ i\ <\ list.\mbox{\hyperlink{classList_a1c6501027880d2a6c332c4928bdb6afd}{length}}();\ i++)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ T\ key\ =\ list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(i);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ j\ =\ i\ -\/\ 1;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (j\ >=\ 0\ \&\&\ compare(list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(j),\ key)\ ==\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f}{Compare::Gr}})\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(j\ +\ 1)\ =\ list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(j);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ j\ -\/=\ 1;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(j\ +\ 1)\ =\ key;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00111\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMergeSort}{MergeSort}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSort}{Sort}}<T>\ \{}
+\DoxyCodeLine{00112\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMergeSort_ada7ea6029014500cb62456eeed0f9236}{sort}}(}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classList}{List<T>}}\&\ list,}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ std::function<\mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ T\&\ second)>\ compare\ =}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSort}{Sort<T>::default\_compare}}}
+\DoxyCodeLine{00123\ \ \ \ \ )\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list.\mbox{\hyperlink{classList_a1c6501027880d2a6c332c4928bdb6afd}{length}}()\ <\ 2)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ merge\_sort(list,\ 0,\ list.\mbox{\hyperlink{classList_a1c6501027880d2a6c332c4928bdb6afd}{length}}()\ -\/\ 1,\ compare);}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ merge\_sort(}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classList}{List<T>}}\&\ list,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ left,}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ right,}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::function<\mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ T\&\ second)>\ compare}
+\DoxyCodeLine{00142\ \ \ \ \ )\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (left\ >=\ right)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ mid\ =\ left\ +\ (right\ -\/\ left)\ /\ 2;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ merge\_sort(list,\ left,\ mid,\ compare);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ merge\_sort(list,\ mid\ +\ 1,\ right,\ compare);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ merge(list,\ left,\ mid,\ right,\ compare);}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ merge(}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classList}{List<T>}}\&\ list,}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ left,}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ mid,}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ right,}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ std::function<\mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ T\&\ second)>\ compare}
+\DoxyCodeLine{00166\ \ \ \ \ )\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ n1\ =\ mid\ -\/\ left\ +\ 1;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ n2\ =\ right\ -\/\ mid;}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ std::vector<T>\ left\_vec(n1);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ std::vector<T>\ right\_vec(n2);}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ n1;\ i++)}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ left\_vec[i]\ =\ list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(left\ +\ i);}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ n2;\ i++)}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ right\_vec[i]\ =\ list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(mid\ +\ 1\ +\ i);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ i\ =\ 0,\ j\ =\ 0,\ k\ =\ left;}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ <\ n1\ \&\&\ j\ <\ n2)\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (compare(left\_vec[i],\ right\_vec[j])\ !=\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f}{Compare::Gr}})\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(k)\ =\ left\_vec[i];}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(k)\ =\ right\_vec[j];}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ <\ n1)\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(k)\ =\ left\_vec[i];}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ i++;\ k++;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (j\ <\ n2)\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(k)\ =\ right\_vec[j];}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ j++;\ k++;}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00207\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00208\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQuickSort}{QuickSort}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSort}{Sort}}<T>\ \{}
+\DoxyCodeLine{00209\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQuickSort_ad158ebbb6e4b9d49f240a4891f8ca009}{sort}}(}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classList}{List<T>}}\&\ list,}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ std::function<\mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ T\&\ second)>\ compare\ =}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSort}{Sort<T>::default\_compare}}}
+\DoxyCodeLine{00220\ \ \ \ \ )\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ quick\_sort(list,\ 0,\ list.\mbox{\hyperlink{classList_a1c6501027880d2a6c332c4928bdb6afd}{length}}()\ -\/\ 1,\ compare);}
+\DoxyCodeLine{00222\ \ \ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{void}\ quick\_sort(}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classList}{List<T>}}\&\ list,}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ low,}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ high,}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ std::function<\mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}(\textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ T\&\ second)>\ compare}
+\DoxyCodeLine{00238\ \ \ \ \ )\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (low\ >=\ high)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ T\&\ pivot1\ =\ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(low);}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ T\&\ pivot2\ =\ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(high);}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (compare(pivot1,\ pivot2)\ ==\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f}{Compare::Gr}})}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ std::swap(pivot1,\ pivot2);}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ less\ =\ low\ +\ 1;}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ great\ =\ high\ -\/\ 1;}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ k\ =\ less;\ k\ <=\ great;\ k++)\ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (compare(list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(k),\ pivot1)\ ==\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504abccd5ec3ec8fd3a4471e71e9b407c60c}{Compare::Le}})\ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::swap(list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(k),\ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(less));}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ less++;}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (compare(list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(k),\ pivot2)\ ==\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f}{Compare::Gr}})\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (k\ <\ great\ \&\&\ compare(list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(great),\ pivot2)\ ==\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f}{Compare::Gr}})}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ great-\/-\/;}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::swap(list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(k),\ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(great));}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ great-\/-\/;}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (compare(list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(k),\ pivot1)\ ==\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504abccd5ec3ec8fd3a4471e71e9b407c60c}{Compare::Le}})\ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::swap(list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(k),\ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(less));}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ less++;}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ std::swap(list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(less\ -\/\ 1),\ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(low));}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ std::swap(list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(great\ +\ 1),\ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(high));}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ quick\_sort(list,\ low,\ less\ -\/\ 2,\ compare);}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ quick\_sort(list,\ great\ +\ 2,\ high,\ compare);}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (compare(pivot1,\ pivot2)\ !=\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a3718b5ecf60aa0dba49e150e96cb1fc3}{Compare::Eq}})\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ k\ =\ less;\ k\ <=\ great;\ k++)\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (compare(list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(k),\ pivot1)\ ==\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a3718b5ecf60aa0dba49e150e96cb1fc3}{Compare::Eq}})\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::swap(list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(k),\ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(less));}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ less++;}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (compare(list.\mbox{\hyperlink{classList_a00438cc4f585447f646beb9649be4e55}{get}}(k),\ pivot2)\ ==\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a3718b5ecf60aa0dba49e150e96cb1fc3}{Compare::Eq}})\ \{}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::swap(list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(k),\ list.\mbox{\hyperlink{classList_a2b0965e31d570b3d6d879d1a7dce1ee4}{get\_mut}}(great));}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ great-\/-\/;}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k-\/-\/;}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (compare(pivot1,\ pivot2)\ ==\ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504abccd5ec3ec8fd3a4471e71e9b407c60c}{Compare::Le}})\ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ quick\_sort(list,\ less,\ great,\ compare);}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00290\ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \};}
+
+\end{DoxyCode}

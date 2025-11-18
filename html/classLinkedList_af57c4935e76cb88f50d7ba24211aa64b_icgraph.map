@@ -1,0 +1,7 @@
+<map id="LinkedList::get_last" name="LinkedList::get_last">
+<area shape="rect" id="Node000001" title="Returns the last element in the list." alt="" coords="211,31,357,56"/>
+<area shape="rect" id="Node000002" href="$classLinkedList.html#ad4283b75d12262dc9d9aa332c3bb8020" title="Removes and returns the last element." alt="" coords="5,5,163,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,35,163,31,163,25,197,30"/>
+<area shape="rect" id="Node000003" href="$classLinkedList.html#ab5126d557e48d6651cd0cf48d0ee6ede" title="Removes and returns an element at a given index." alt="" coords="11,55,157,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,56,157,61,157,56,196,51"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Node::get_data_mut" name="Node::get_data_mut">
+<area shape="rect" id="Node000001" title="Returns mutable reference to stored data." alt="" coords="203,5,357,31"/>
+<area shape="rect" id="Node000002" href="$classLinkedList.html#acbcbf2a0845dd01e5960bd6d44c0e17b" title="Returns a mutable reference to the element at a given index." alt="" coords="5,5,155,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,21,155,21,155,15,189,15"/>
+</map>

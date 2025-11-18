@@ -1,0 +1,87 @@
+\doxysection{sort.\+hpp File Reference}
+\hypertarget{sort_8hpp}{}\label{sort_8hpp}\index{sort.hpp@{sort.hpp}}
+
+
+\doxylink{classSort}{Sort} for lists.  
+
+
+{\ttfamily \#include "{}list.\+hpp"{}}\newline
+Include dependency graph for sort.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{sort_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sort_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSort}{Sort$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for all sorting algorithms. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classInsertionSort}{Insertion\+Sort$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Insertion \doxylink{classSort}{Sort} implementation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classMergeSort}{Merge\+Sort$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Merge \doxylink{classSort}{Sort} implementation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classQuickSort}{Quick\+Sort$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Quick \doxylink{classSort}{Sort} implementation using dual-\/pivot technique. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}} \{ \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504abccd5ec3ec8fd3a4471e71e9b407c60c}{Le}} = -\/1
+, \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a3718b5ecf60aa0dba49e150e96cb1fc3}{Eq}} = 0
+, \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f}{Gr}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Comparison result used by sorting functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classSort}{Sort} for lists. 
+
+\begin{DoxyAuthor}{Author}
+Lukiancenko Liza 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+\doxylink{classArrayList_a77ba51ae82bb2246563af5c4d64d438e}{0.\+1} 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/11-\/16
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}\label{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504} 
+\index{sort.hpp@{sort.hpp}!Compare@{Compare}}
+\index{Compare@{Compare}!sort.hpp@{sort.hpp}}
+\doxysubsubsection{\texorpdfstring{Compare}{Compare}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classArrayList}{enum}} \mbox{\hyperlink{classArrayList}{class}} \mbox{\hyperlink{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Comparison result used by sorting functions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Le@{Le}!sort.hpp@{sort.hpp}}\index{sort.hpp@{sort.hpp}!Le@{Le}}}\Hypertarget{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504abccd5ec3ec8fd3a4471e71e9b407c60c}\label{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504abccd5ec3ec8fd3a4471e71e9b407c60c} 
+Le&First \texorpdfstring{$<$}{<} Second. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Eq@{Eq}!sort.hpp@{sort.hpp}}\index{sort.hpp@{sort.hpp}!Eq@{Eq}}}\Hypertarget{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a3718b5ecf60aa0dba49e150e96cb1fc3}\label{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a3718b5ecf60aa0dba49e150e96cb1fc3} 
+Eq&First == Second. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gr@{Gr}!sort.hpp@{sort.hpp}}\index{sort.hpp@{sort.hpp}!Gr@{Gr}}}\Hypertarget{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f}\label{sort_8hpp_af5e6c1e42f1dbe27251f73c8b89d2504a27791fb46bea15c962b6b9e0d5ab479f} 
+Gr&First \texorpdfstring{$>$}{>} Second. \\
+\hline
+
+\end{DoxyEnumFields}

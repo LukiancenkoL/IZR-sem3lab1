@@ -1,0 +1,9 @@
+<map id="LinkedList::get_mut" name="LinkedList::get_mut">
+<area shape="rect" id="Node000001" title="Returns a mutable reference to the element at a given index." alt="" coords="5,55,155,80"/>
+<area shape="rect" id="Node000002" href="$classNode.html#a59c2ec59a612a47b2ecfe258630d2081" title="Returns mutable reference to stored data." alt="" coords="203,5,357,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,52,214,31,215,37,133,57"/>
+<area shape="rect" id="Node000003" href="$classNode.html#a9b3568024bf6d0833e29c1c4fa136845" title="Returns pointer to the next node." alt="" coords="219,55,341,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,65,206,65,206,70,155,70"/>
+<area shape="rect" id="Node000004" href="$classLinkedList.html#ac26a4ca0df7c8e0ea72ddee3718fb143" title="Returns the number of elements stored in the list." alt="" coords="212,104,348,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="133,77,215,98,214,103,132,83"/>
+</map>

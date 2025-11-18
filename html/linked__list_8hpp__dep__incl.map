@@ -1,0 +1,7 @@
+<map id="linked_list.hpp" name="linked_list.hpp">
+<area shape="rect" id="Node000001" title="Implementation of a doubly linked list based on the List interface." alt="" coords="90,5,206,31"/>
+<area shape="rect" id="Node000002" href="$linked__list__test_8cpp.html" title="Unit tests for LinkedList." alt="" coords="5,79,152,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,43,92,80,88,77,125,39"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Main file." alt="" coords="176,79,259,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,39,208,77,204,80,167,43"/>
+</map>
