@@ -18,6 +18,7 @@
 #include "linked_list.hpp"
 #include "sort.hpp"
 #include "array_list.hpp"
+#include "test_header.hpp"
 
 int main(int argc, char** argv) {
 	if (argc > 1 && argv[1] == std::string("--test")) {
