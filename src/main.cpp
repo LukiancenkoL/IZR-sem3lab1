@@ -1,16 +1,32 @@
 
+/**
+ * @file main.cpp
+ * @author Lukiancenko Liza
+ * @brief Main file
+ * @version 0.1
+ * @date 2025-11-16
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
+
+/// \cond
 #include <cstddef>
 #include <print>
-#include <cstring>
-#include <gtest/gtest.h>
-
+#include "gtest/gtest.h"
+/// \endcond
 #include "linked_list.hpp"
 #include "sort.hpp"
-#include "geometry.hpp"
 #include "array_list.hpp"
+#include "test_header.hpp"
 
 int main(int argc, char** argv) {
-	auto a = ArrayList<int>();
+	if (argc > 1 && argv[1] == std::string("--test")) {
+		testing::InitGoogleTest(&argc, argv);
+		return RUN_ALL_TESTS();
+	}
+
+	auto a = ArrayList<int32_t>();
 	a.push_back(1);
 	a.push_back(2);
 	a.push_back(3);
@@ -18,7 +34,7 @@ int main(int argc, char** argv) {
 	a.pop_front();
 	a.pop_back();
 
-	auto l = LinkedList<int>();
+	auto l = LinkedList<int32_t>();
 	l.push_back(1);
 	l.push_back(2);
 	l.push_front(0);
@@ -40,15 +56,18 @@ int main(int argc, char** argv) {
 	// g.push_back(point3);
 	// g.push_back(point4);
 
+	InsertionSort<int32_t> insertion_sort{};
+	a.sort(insertion_sort);
 
-	InsertionSort<int> insertion_sort;
-	a.sort_array(insertion_sort);
+	std::println("merge");
+	MergeSort<int32_t> m_sort{};
+	a.sort(m_sort);
+	std::println("merge done");
 
-	MergeSort<int> m_sort;
-	a.sort_array(m_sort);
-
-	QuickSort<int> q_sort;
-	a.sort_array(q_sort);
+	std::println("qick");
+	QuickSort<int32_t> q_sort{};
+	a.sort(q_sort);
+	std::println("qick done");
 
 	std::println("Lenght: {}", l.length());
 	std::println("First: {}", l.get_first());
@@ -62,5 +81,4 @@ int main(int argc, char** argv) {
 		std::println("args: {}", argv[i]);
 	}
 
-	return 0;
 }
